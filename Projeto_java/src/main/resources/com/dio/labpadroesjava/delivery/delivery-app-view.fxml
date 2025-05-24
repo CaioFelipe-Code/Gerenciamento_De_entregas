@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="800.0" spacing="10.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dio.labpadroesjava.delivery.DeliveryAppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label styleClass="app-title" text="Sistema de Entrega de Pedidos">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font></Label>
+    <Separator />
+    <Label fx:id="singletonStatusLabel" styleClass="info-label" text="Status do Singleton: Carregando..." />
+    <Label fx:id="configCostLabel" styleClass="info-label" text="Custo Padrão/Km: R$ ---" />
+    <Button onAction="#openConfigDialog" styleClass="config-button" text="Configurar Custo de Entrega" />
+    <Separator />
+
+    <GridPane hgap="10.0" prefWidth="760.0" vgap="10.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="100.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label text="ID do Pedido:" GridPane.rowIndex="0" />
+        <TextField fx:id="orderIdField" promptText="Ex: ORD001" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Nome Cliente:" GridPane.rowIndex="1" />
+        <TextField fx:id="customerNameField" promptText="Ex: João Silva" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Endereço Cliente:" GridPane.rowIndex="2" />
+        <TextField fx:id="customerAddressField" promptText="Ex: Rua Exemplo, 123" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Total Pedido (R$):" GridPane.rowIndex="3" />
+        <TextField fx:id="totalAmountField" promptText="Ex: 150.00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Distância (Km):" GridPane.rowIndex="4" />
+        <TextField fx:id="deliveryDistanceField" promptText="Ex: 10.5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Tipo de Entrega:" GridPane.rowIndex="5" />
+        <ComboBox fx:id="deliveryTypeComboBox" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="15.0">
+        <Button onAction="#processOrder" styleClass="action-button" text="Processar Pedido" />
+        <Button onAction="#clearFields" styleClass="action-button" text="Limpar Campos" />
+    </HBox>
+
+    <Separator />
+    <Label styleClass="section-title" text="Log de Processamento" />
+    <ScrollPane fitToWidth="true" prefHeight="250.0" prefWidth="760.0">
+        <content>
+            <TextArea fx:id="outputTextArea" editable="false" wrapText="true" />
+        </content>
+    </ScrollPane>
+</VBox>
