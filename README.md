@@ -21,69 +21,12 @@ Observer: Implementado para notificar diferentes partes do sistema (como Custome
 🛠️ Tecnologias Utilizadas:
 
 Java 17+
+
 JavaFX 22 (para a interface gráfica)
+
 Maven (para gerenciamento de dependências e build do projeto)
 
-📦 Como Compilar e Executar
-Para rodar este projeto, você precisará ter o JDK 17 ou superior e o Apache Maven instalados em sua máquina.
 
-Clone o repositório:
-
-Bash
-
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-cd SEU_REPOSITORIO
-(Lembre-se de substituir SEU_USUARIO e SEU_REPOSITORIO pelos seus dados reais.)
-
-Compile o projeto com Maven:
-Navegue até a pasta raiz do projeto no terminal e execute:
-
-Bash
-
-mvn clean install
-Este comando limpará qualquer build anterior, baixará as dependências e compilará o código-fonte, incluindo a cópia dos recursos FXML e CSS para o local correto.
-
-Execute a aplicação JavaFX:
-Após a compilação bem-sucedida, execute:
-
-Bash
-
-mvn javafx:run
-Isso iniciará a aplicação JavaFX, e a interface gráfica do sistema de entrega deverá aparecer.
-
-📂 Estrutura do Projeto
-A estrutura de pastas segue o padrão Maven e as boas práticas de separação de responsabilidades para os recursos:
-
-.
-├── pom.xml
-└── src
-├── main
-│ ├── java
-│ │ └── com
-│ │ └── dio
-│ │ └── labpadroesjava
-│ │ └── delivery
-│ │ ├── config // Padrão Singleton
-│ │ ├── facade // Padrão Facade
-│ │ ├── model // Padrão Builder
-│ │ ├── observer // Padrão Observer
-│ │ ├── strategy // Padrão Strategy
-│ │ ├── App.java // Classe principal da aplicação JavaFX
-│ │ └── DeliveryAppController.java // Controlador da UI
-│ └── resources
-│ └── com
-│ └── dio
-│ └── labpadroesjava
-│ └── delivery
-│ ├── delivery-app-view.fxml // Layout da interface
-│ └── styles.css // Estilos da interface
-└── test
-└── java
-└── com
-└── dio
-└── labpadroesjava
-└── delivery
-└── <Seus_Testes_Unitarios_Aqui>
 
 📈 Melhorias Futuras (Sugestões)
 Persistência de Dados: Adicionar um banco de dados (SQLite, H2, etc.) para persistir informações de pedidos e configurações.
