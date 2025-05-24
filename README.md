@@ -26,12 +26,3 @@ JavaFX 22 (para a interface gráfica)
 
 Maven (para gerenciamento de dependências e build do projeto)
 
-
-
-📈 Melhorias Futuras (Sugestões)
-Persistência de Dados: Adicionar um banco de dados (SQLite, H2, etc.) para persistir informações de pedidos e configurações.
-Validação de Entrada: Implementar validações de entrada de dados mais robustas na UI.
-Mais Estratégias de Entrega: Criar novos tipos de entrega com lógicas de cálculo mais complexas.
-Interface de Configuração Dedicada: Desenvolver uma tela de configuração mais completa para o Singleton.
-Testes Unitários: Adicionar testes unitários para a lógica de negócio e os padrões de projeto.
-Documentação Javadoc: Adicionar documentação Javadoc para classes e métodos importantes.
