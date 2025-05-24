@@ -18,7 +18,8 @@ Facade: A classe OrderProcessingFacade simplifica a interface para o subsistema 
 Builder: O padrão OrderBuilder é usado para construir objetos Order de forma mais flexível e legível, separando a construção da representação complexa do objeto.
 Observer: Implementado para notificar diferentes partes do sistema (como CustomerNotifier e LogisticsUpdater) sobre mudanças no status do pedido, desacoplando os objetos que monitoram dos objetos que são monitorados.
 
-🛠️ Tecnologias Utilizadas
+🛠️ Tecnologias Utilizadas:
+
 Java 17+
 JavaFX 22 (para a interface gráfica)
 Maven (para gerenciamento de dependências e build do projeto)
